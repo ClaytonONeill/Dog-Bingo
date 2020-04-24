@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import BoardSquare from './boardsquare.js'
 
 
 let baseUrl = '';
@@ -29,26 +29,18 @@ class Main extends Component  {
 
 
 
-
-
-
-
-
-
 componentDidMount() {
   this.fetchDogs()
 }
 
 
-
 render()  {
 
-  const dogs = Object.keys(this.state.breedData);
-
+const dogs = Object.keys(this.state.breedData)
 
   return(
       <React.Fragment>
-        <h1>{dogs[Math.floor(Math.random() * dogs.length)]}</h1>
+        <BoardSquare data={dogs} />
       </React.Fragment>
     )
   }
