@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 class Header extends Component {
   render()  {
     return(
-      <div className="boardHead">
+      <div className="head">
         <h1>DOG-BINGO</h1>
       </div>
     )

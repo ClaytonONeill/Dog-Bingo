@@ -12,14 +12,14 @@ code {
     monospace;
 }
 
-.boardHead  {
+.head  {
   border-bottom: 1px solid red;
   text-align: center;
   width: 100%;
   margin-bottom: 4em;
 }
 
-.boardHead h1 {
+.head h1 {
   font-size: 4em;
 }
 
@@ -53,6 +53,19 @@ code {
   background: white;
   box-shadow: -1px 1px 5px black;
   transition: .2s ease-in-out;
+}
+
+.checkedPiece {
+  height: 10em;
+  width: 10em;
+  min-width: 10em;
+  min-height: 10em;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: .8em;
+  padding: 1em;
+  background: red;
+  box-shadow: -1px 1px 5px black;
 }
 
 .piece:hover {

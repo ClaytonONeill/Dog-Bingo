@@ -40,7 +40,9 @@ const dogs = Object.keys(this.state.breedData)
 
   return(
       <React.Fragment>
+        <div className="total">
           <Board data={dogs} view={this.props.handleView}/>
+        </div>
       </React.Fragment>
     )
   }
