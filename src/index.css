@@ -52,7 +52,7 @@ code {
   padding: 1em;
   background: white;
   box-shadow: -1px 1px 5px black;
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .piece:hover {

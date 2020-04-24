@@ -9,9 +9,6 @@ class Board extends Component {
   }
 
 
-
-
-
   render()  {
     return  (
       <React.Fragment>
