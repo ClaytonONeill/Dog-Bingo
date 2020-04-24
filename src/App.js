@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import Main from './components/main.js'
+import Header from './components/header.js'
 
-class App extends React.Component  {
-  constructor(props)  {
-    super(props)
-    this.state = {
-
-    }
-  }
-
+class App extends Component  {
   render()  {
     return(
-      <React.Fragment>
-        <Main />
-      </ React.Fragment>
+        <div>
+          <Header />
+          <Main />
+        </div>
     )
   }
 }

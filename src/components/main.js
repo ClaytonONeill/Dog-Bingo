@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BoardSquare from './boardsquare.js'
+import Board from './board.js'
 
 
 let baseUrl = '';
@@ -40,7 +40,9 @@ const dogs = Object.keys(this.state.breedData)
 
   return(
       <React.Fragment>
-        <BoardSquare data={dogs} />
+        <div>
+          <Board data={dogs} />
+        </div>
       </React.Fragment>
     )
   }

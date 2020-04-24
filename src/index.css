@@ -11,3 +11,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.boardHead  {
+  border-bottom: 1px solid red;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 4em;
+}
+
+.boardHead h1 {
+  font-size: 4em;
+}
+
+.theBoard {
+  margin: 4em;
+  size: 100%;
+}
+
+.boardContain {
+  border: 1px solid red;
+  text-align: center;
+  width: 80em;
+  width: 80em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: lightyellow;
+}
+
+.piece {
+  height: 10em;
+  width: 10em;
+  min-width: 10em;
+  min-height: 10em;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: .8em;
+  padding: 1em;
+  background: white;
+  box-shadow: -1px 1px 5px black;
+  transition: .3s ease-in-out;
+}
+
+.piece:hover {
+  cursor: pointer;
+  background: pink;
+
+}
+
+.piece h2 {
+  font-size: 1em;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 9em;
+  text-transform: uppercase;
+}
