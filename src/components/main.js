@@ -24,16 +24,21 @@ class Main extends Component  {
 
   modalShow = (event) => {
     this.setState({
+      breedData: this.state.breedData,
       showmodal: !this.state.showmodal
     })
   }
 
+  getDogs = () => {
+    axios.get(`${baseUrl}`)
+    .then(res => {
+      this.setState({breedData: res.data.message})
+        }).catch(err=>console.log(err))
+  }
+
 
 componentDidMount() {
-  axios.get(`${baseUrl}`)
-  .then(res => {
-    this.setState({breedData: res.data.message})
-      }).catch(err=>console.log(err))
+      this.getDogs();
   }
 
 
@@ -47,6 +52,7 @@ render()  {
         <Uploads
           modalState={this.state.showmodal}
           modalChange={this.modalShow}
+          formInputs={this.props.formInputs}
         />
         <Board
         modalState={this.state.showmodal}

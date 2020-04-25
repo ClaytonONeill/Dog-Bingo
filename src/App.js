@@ -8,9 +8,11 @@ class App extends Component  {
   constructor(props)  {
     super(props);
     this.state = {
-      view: {
-        page: 'home',
-        pageTitle: 'Dog-Bingo'
+      formInputs: {
+        breed: null,
+        image: null,
+        location: null,
+        id: null
       }
     }
   }
@@ -22,7 +24,7 @@ class App extends Component  {
         <div>
           <Header />
           <Main
-          view={this.state.view}
+            formInputs={this.state.formInputs}
           />
         </div>
     )

@@ -19,7 +19,6 @@ class BoardSquare extends Component {
   render()  {
 
   const createBoard = () => {
-
     let board = []
 
     for (let i = 0; i < 1; i++) {
@@ -31,8 +30,6 @@ class BoardSquare extends Component {
       }
     return board
   }
-
-
 
     return(
       <div>

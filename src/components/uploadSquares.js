@@ -18,6 +18,14 @@ class Uploads extends Component {
       }).catch(err => console.log(err));
     }
 
+    handleCreate = (createData) => {
+      axios.post('https://infinite-dusk-19119.herokuapp.com/api/dog')
+      .then(res =>  {
+        console.log(res);
+      })
+    }
+
+
 
   componentDidMount() {
     this.getFiles();
@@ -37,7 +45,10 @@ class Uploads extends Component {
           ))}
         </div>
       </div>
-      <Form modalState={this.props.modalState}/>
+      <Form
+        modalState={this.props.modalState}
+        handleCreate={this.handleCreate}
+        formInputs={this.props.formInputs}/>
       </ React.Fragment>
     )
   }
