@@ -14,6 +14,7 @@ class Form extends Component  {
   }
 
   handleChange = (e)  =>  {
+    console.log(e.target.id);
     this.setState({[e.target.id] : e.target.value})
   }
 
@@ -28,11 +29,24 @@ class Form extends Component  {
       <div className={this.props.modalState ? "modalShow" : "modal"}>
         <form onSubmit={this.handleSubmit}>
           <label>Breed</label><br/>
-          <input type="text" /><br/>
+          <input
+          type="text"
+          id="breed"
+          value={this.state.breed}
+          onChange={this.handleChange}
+          /><br/>
           <label>Image</label><br/>
-          <input type="text" /><br/>
+          <input
+          type="text"
+          id="image"
+          value={this.state.image}
+          onChange={this.handleChange}/><br/>
           <label>Location</label><br/>
-          <input type="text" /><br/>
+          <input
+          type="text"
+          id="location" 
+          value={this.state.location}
+          onChange={this.handleChange}/><br/>
           <input type="submit" id="sub"/>
         </form>
       </div>

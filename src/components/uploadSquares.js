@@ -19,11 +19,25 @@ class Uploads extends Component {
     }
 
     handleCreate = (createData) => {
-      axios.post('https://infinite-dusk-19119.herokuapp.com/api/dog')
-      .then(res =>  {
-        console.log(res);
+      this.props.modalChange();
+      fetch('https://infinite-dusk-19119.herokuapp.com/api/dog', {
+      body: JSON.stringify(createData),
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then(createdPost => {
+      return createdPost.json()
+    }).then(jsonedPost => {
+      this.setState(prevState => {
+        prevState.files = jsonedPost
+        return {
+          files: prevState.files
+        }
       })
-    }
+    }).catch(err => console.log(err))
+  }
 
 
 

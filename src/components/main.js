@@ -42,7 +42,6 @@ componentDidMount() {
   }
 
 
-
 render()  {
 
   const dogs = Object.keys(this.state.breedData)
