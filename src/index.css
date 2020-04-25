@@ -36,6 +36,12 @@ code {
   margin: 4em;
 }
 
+.blurBoard  {
+  margin: 4em;
+  filter: blur(10px);
+  display: none;
+}
+
 .boardContain {
   border: 5px solid #F7882F;
   box-shadow: -2px 2px 4px black;
@@ -78,6 +84,16 @@ code {
 }
 
 .uploads  {
+  margin: 0 auto;
+  min-height: 20em;
+  height: auto;
+  width: 80%;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.blurUploads {
+  filter: blur(10px);
   margin: 0 auto;
   min-height: 20em;
   height: auto;
@@ -148,17 +164,17 @@ code {
   position: absolute;
   right: 0;
   left: 0;
-  top: 25em;;
+  top: 20em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 60em;
-  height: 50em;
+  height: 30em;
   padding: 1em;
   border: 5px solid #F7882F ;
   background: rgb(245, 244, 242);
   border-radius: 5px;
   padding: 1em;
-  margin: 0 auto;
+  margin: 1em auto;
   box-shadow: -1px 2px 4px black;
 }

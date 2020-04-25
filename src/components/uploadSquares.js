@@ -7,8 +7,7 @@ class Uploads extends Component {
     constructor(props)  {
       super(props);
       this.state = {
-        files: [],
-        showmodal: false
+        files: []
       }
     }
 
@@ -20,12 +19,6 @@ class Uploads extends Component {
     }
 
 
-    modalShow = () => {
-      this.setState({
-        showmodal: true
-      })
-    }
-
   componentDidMount() {
     this.getFiles();
   }
@@ -33,9 +26,9 @@ class Uploads extends Component {
   render()  {
     return (
       <React.Fragment>
-      <div className="uploads">
+      <div className={this.props.modalState ? "blurUploads" : "uploads"}>
         <div className="fileHold">
-          <div className="uploadMe" onClick={this.modalShow}>
+          <div className="uploadMe" onClick={this.props.modalChange}>
             <h2>Found a dog?<br/> Click Me!</h2>
           </div>
           {this.state.files.map((fileData) => (
@@ -44,7 +37,7 @@ class Uploads extends Component {
           ))}
         </div>
       </div>
-      <Form showCheck={this.state.showmodal} />
+      <Form modalState={this.props.modalState}/>
       </ React.Fragment>
     )
   }

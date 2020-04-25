@@ -21,7 +21,6 @@ class App extends Component  {
     return(
         <div>
           <Header />
-          <Uploads/>
           <Main
           view={this.state.view}
           />

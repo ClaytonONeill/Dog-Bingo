@@ -11,7 +11,7 @@ class Board extends Component {
   render()  {
     return  (
       <React.Fragment>
-        <div className="theBoard">
+        <div className={this.props.modalState ? "blurBoard" : "theBoard"}>
           <BoardSquare data={this.props.data} />
         </div>
       </React.Fragment>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Board from './board.js'
+import Uploads from './uploadSquares.js'
 
 
 let baseUrl = '';
@@ -17,7 +18,14 @@ class Main extends Component  {
     super(props);
     this.state = {
       breedData: {},
+      showmodal: false
     }
+  }
+
+  modalShow = (event) => {
+    this.setState({
+      showmodal: !this.state.showmodal
+    })
   }
 
 
@@ -36,7 +44,13 @@ render()  {
 
   return(
       <React.Fragment>
-        <Board data={dogs} />
+        <Uploads
+          modalState={this.state.showmodal}
+          modalChange={this.modalShow}
+        />
+        <Board
+        modalState={this.state.showmodal}
+        data={dogs} />
       </React.Fragment>
     )
   }

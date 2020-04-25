@@ -4,16 +4,14 @@ import axios from 'axios'
 
 class Form extends Component  {
 
-  fileUploadHandler = () => {
+  handleSubmit = () => {
     axios.post()
   }
 
 
-
   render()  {
     return(
-      <div className={this.props.showCheck ? "modalShow" : "modal"}>
-        <h1>Form</h1>
+      <div className={this.props.modalState ? "modalShow" : "modal"}>
       </div>
     )
   }
