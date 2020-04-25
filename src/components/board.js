@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import BoardSquare from './boardsquare.js'
 
 
-
 class Board extends Component {
   constructor(props)  {
     super(props);

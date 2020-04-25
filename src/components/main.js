@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import Board from './board.js'
 
 
@@ -19,30 +20,23 @@ class Main extends Component  {
     }
   }
 
-  fetchDogs = () => {
-    fetch(`${baseUrl}`)
-    .then(data=>data.json())
-    .then(jData=> {
-      this.setState({breedData:jData.message})
-    }).catch(err=>console.log(err))
-}
-
-
 
 componentDidMount() {
-  this.fetchDogs()
-}
+  axios.get(`${baseUrl}`)
+  .then(res => {
+    this.setState({breedData: res.data.message})
+      }).catch(err=>console.log(err))
+  }
+
 
 
 render()  {
 
-const dogs = Object.keys(this.state.breedData)
+  const dogs = Object.keys(this.state.breedData)
 
   return(
       <React.Fragment>
-        <div className="total">
-          <Board data={dogs} view={this.props.handleView}/>
-        </div>
+        <Board data={dogs} />
       </React.Fragment>
     )
   }

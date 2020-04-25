@@ -7,37 +7,12 @@ class BoardSquare extends Component {
     super(props);
     this.state = {
       checked: [],
-      check1: false,
-      check2: false,
-      check3: false,
-      check4: false,
-      check5: false,
-      check6: false,
-      check7: false,
-      check8: false,
-      check9: false,
-      check10: false,
-      check11: false,
-      check12: false,
-      check13: false,
-      check14: false,
-      check15: false,
-      check16: false,
-      check17: false,
-      check18: false,
-      check19: false,
-      check20: false,
-      check21: false,
-      check22: false,
-      check23: false,
-      check24: false,
-      check25: false,
     }
   }
 
   activate = (event) => {
     this.state.checked.push(event.target.id);
-    event.currentTarget.style.background="pink";
+    event.currentTarget.style.background="#F7C331";
   }
 
 
