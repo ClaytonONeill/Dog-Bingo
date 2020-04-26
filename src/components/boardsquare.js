@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 
-
 class BoardSquare extends Component {
   constructor(props)  {
     super(props);

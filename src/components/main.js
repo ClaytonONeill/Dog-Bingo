@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import  BoardSquare from './boardSquare.js'
+import BoardSquare from './boardSquare.js'
 import Uploads from './uploadSquares.js'
 import Footer from './footer.js'
 
