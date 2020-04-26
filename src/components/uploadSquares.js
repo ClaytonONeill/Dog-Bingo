@@ -39,6 +39,10 @@ class Uploads extends Component {
     }).catch(err => console.log(err))
   }
 
+  handleDelete = (id) => {
+    axios.delete(`https://infinite-dusk-19119.herokuapp.com/api/dog/${id}`)
+    .then(this.getFiles());
+  }
 
 
   componentDidMount() {
@@ -54,8 +58,10 @@ class Uploads extends Component {
             <h2>Found a dog?<br/> Click Me!</h2>
           </div>
           {this.state.files.map((fileData) => (
-            <Files key={fileData.id}
-            fileData={fileData} />
+            <Files
+            key={fileData.id}
+            fileData={fileData}
+            deleteFile={this.handleDelete} />
           ))}
         </div>
       </div>
