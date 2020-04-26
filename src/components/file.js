@@ -9,7 +9,7 @@ class Files extends Component {
 
 render()  {
     return(
-      <div className="eachFile" onClick={() => {this.props.deleteFile(this.props.fileData.id)}}>
+      <div className="eachFile" onDoubleClick={() => {this.props.deleteFile(this.props.fileData.id)}}>
           <img className="dogPics" src={this.props.fileData.image}/>
           <div className="dogInfo">
             <h3>{this.props.fileData.breed}</h3>

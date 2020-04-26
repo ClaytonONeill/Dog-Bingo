@@ -40,8 +40,9 @@ class Uploads extends Component {
   }
 
   handleDelete = (id) => {
+    console.log(id);
     axios.delete(`https://infinite-dusk-19119.herokuapp.com/api/dog/${id}`)
-    .then(this.getFiles());
+    .then(res => {this.getFiles()});
   }
 
 
