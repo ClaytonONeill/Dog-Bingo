@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Board from './board.js'
+import  BoardSquare from './boardSquare.js'
 import Uploads from './uploadSquares.js'
+import Footer from './footer.js'
 
 
 let baseUrl = '';
 
 if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'https://dog.ceo/api/breeds/list/all'
+  baseUrl = 'https://dog.ceo/api/breeds/list/random/25'
 } else {
-  baseUrl = 'https://dog.ceo/api/breeds/list/all'
+  baseUrl = 'https://dog.ceo/api/breeds/list/random/25'
 }
 
 
@@ -17,22 +18,23 @@ class Main extends Component  {
   constructor(props)  {
     super(props);
     this.state = {
-      breedData: {},
+      breedData: [],
       showmodal: false
     }
   }
 
   modalShow = (event) => {
     this.setState({
-      breedData: this.state.breedData,
-      showmodal: !this.state.showmodal
+      showmodal: !this.state.showmodal,
     })
   }
 
   getDogs = () => {
     axios.get(`${baseUrl}`)
     .then(res => {
-      this.setState({breedData: res.data.message})
+      this.setState({
+        breedData: res.data.message
+      })
         }).catch(err=>console.log(err))
   }
 
@@ -44,8 +46,6 @@ componentDidMount() {
 
 render()  {
 
-  const dogs = Object.keys(this.state.breedData)
-
   return(
       <React.Fragment>
         <Uploads
@@ -53,9 +53,14 @@ render()  {
           modalChange={this.modalShow}
           formInputs={this.props.formInputs}
         />
-        <Board
-          modalState={this.state.showmodal}
-          data={dogs} />
+        <div className={this.state.showmodal ? "blurBoard" : "boardContain"}>
+          {this.state.breedData.map((dogData) => (
+            <BoardSquare
+            data={dogData} />
+          ))}
+        </div>
+        <Footer
+        modalState={this.state.showmodal} />
       </React.Fragment>
     )
   }

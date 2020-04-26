@@ -45,13 +45,7 @@ code {
 
 /* BOARD CSS */
 
-.theBoard {
-  margin: 4em;
-}
-
 .blurBoard  {
-  margin: 4em;
-  filter: blur(10px);
   display: none;
 }
 
@@ -61,7 +55,7 @@ code {
   text-align: center;
   width: 80em;
   width: 80em;
-  margin: 0 auto;
+  margin: 4em auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -253,6 +247,10 @@ form input[type="submit"]:hover {
 }
 
 /* FOOTER  */
+
+.noFooter {
+  display: none;
+}
 
 .footer {
   height:12em;
