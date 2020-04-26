@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
+/* HEADER CSS */
 
 .head  {
   border-bottom: 3px solid #F7882F;
@@ -31,6 +32,18 @@ code {
   padding-top: .5em;
   text-shadow: -2px 2px orange;
 }
+
+/* BING BUTTON CSS */
+
+.bingo  {
+  background: blue;
+}
+
+.noBingo  {
+  background: red;
+}
+
+/* BOARD CSS */
 
 .theBoard {
   margin: 4em;
@@ -84,6 +97,8 @@ code {
   text-transform: uppercase;
 }
 
+/* TOP UPLOAD STYLE */
+
 .uploads  {
   margin: 0 auto;
   min-height: 20em;
@@ -131,6 +146,12 @@ code {
   text-align: center;
   margin: 1em;
   box-shadow: -2px 2px 4px black;
+  transition: .1s ease-in-out;
+}
+
+.eachFile:hover {
+  filter: brightness(50%);
+  cursor: pointer;
 }
 
 .eachFile img {
@@ -160,6 +181,8 @@ code {
   margin-top: 5px;
   padding-bottom: 5px;
 }
+
+/* MODAL CSS */
 
 .modal {
   display: none;
@@ -211,5 +234,51 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
   background: #6B7A8F;
+  cursor: pointer;
+}
+
+#modalButton {
+  background: red;
+  height: 2.5em;
+  color: white;
+  text-transform: uppercase;
+  border: 3px solid grey;
+  border-radius: 5psx;
+  transition: .2s ease-in-out;
+}
+
+#modalButton:hover {
+  background: maroon;
+  cursor: pointer;
+}
+
+/* FOOTER  */
+
+.footer {
+  height:12em;
+  width: 100%;
+  background: #F7882F;
+  border-top: 5px solid #6B7A8F;
+}
+
+.listContain  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.listOne, .listTwo  {
+  line-height: 2.5em;
+  font-size: 1.2em;
+  color: white;
+}
+
+li {
+  list-style: none;
+  transition: .2s ease-in-out;
+}
+
+li:hover {
+  color: #6B7A8F;
   cursor: pointer;
 }

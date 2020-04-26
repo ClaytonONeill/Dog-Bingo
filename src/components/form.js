@@ -44,11 +44,12 @@ class Form extends Component  {
           <label>Location</label><br/>
           <input
           type="text"
-          id="location" 
+          id="location"
           value={this.state.location}
           onChange={this.handleChange}/><br/>
-          <input type="submit" id="sub"/>
+          <input type="submit"/>
         </form>
+        <button id="modalButton" onClick={this.props.modalChange}>X</button>
       </div>
     )
   }

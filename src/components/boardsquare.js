@@ -13,10 +13,12 @@ class BoardSquare extends Component {
   activate = (event) => {
     this.state.checked.push(event.target.id);
     event.currentTarget.style.background="#F7C331";
+    console.log(this.state.bingo);
   }
 
 
   render()  {
+
 
   const createBoard = () => {
     let board = []

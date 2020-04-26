@@ -54,8 +54,8 @@ render()  {
           formInputs={this.props.formInputs}
         />
         <Board
-        modalState={this.state.showmodal}
-        data={dogs} />
+          modalState={this.state.showmodal}
+          data={dogs} />
       </React.Fragment>
     )
   }

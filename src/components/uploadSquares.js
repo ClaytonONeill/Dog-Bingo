@@ -56,6 +56,7 @@ class Uploads extends Component {
         <div className="fileHold">
           <div className="uploadMe" onClick={this.props.modalChange}>
             <h2>Found a dog?<br/> Click Me!</h2>
+            <h5>Double cick a dog to remove them!</h5>
           </div>
           {this.state.files.map((fileData) => (
             <Files
@@ -68,7 +69,10 @@ class Uploads extends Component {
       <Form
         modalState={this.props.modalState}
         handleCreate={this.handleCreate}
-        formInputs={this.props.formInputs}/>
+        formInputs={this.props.formInputs}
+        modalChange={this.props.modalChange}
+        />
+
       </ React.Fragment>
     )
   }
