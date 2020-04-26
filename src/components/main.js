@@ -5,13 +5,7 @@ import Uploads from './uploadSquares.js'
 import Footer from './footer.js'
 
 
-let baseUrl = '';
-
-if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'https://dog.ceo/api/breeds/list/random/25'
-} else {
-  baseUrl = 'https://dog.ceo/api/breeds/list/random/25'
-}
+let baseUrl = 'https://dog.ceo/api/breeds/list/random/25';
 
 
 class Main extends Component  {
