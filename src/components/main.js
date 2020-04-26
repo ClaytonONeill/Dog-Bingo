@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import BoardSquare from './boardSquare.js'
+import Square from './square.js'
 import Uploads from './uploadSquares.js'
 import Footer from './footer.js'
 
@@ -49,7 +49,7 @@ render()  {
         />
         <div className={this.state.showmodal ? "blurBoard" : "boardContain"}>
           {this.state.breedData.map((dogData) => (
-            <BoardSquare
+            <Square
             data={dogData} />
           ))}
         </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-class BoardSquare extends Component {
+class Square extends Component {
   constructor(props)  {
     super(props);
   }
@@ -21,4 +21,4 @@ class BoardSquare extends Component {
 }
 
 
-export default BoardSquare;
+export default Square;
