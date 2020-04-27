@@ -36,4 +36,4 @@ Upload their pictures and when you get 5 in a row, hit the bingo button and win 
 
 ----
 ## Created by
-* Clayton O'Neill (Mongo Atlas)
+* Clayton O'Neill
