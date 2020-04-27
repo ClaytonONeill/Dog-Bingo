@@ -281,10 +281,11 @@ li:hover {
   cursor: pointer;
 }
 
+/* BINGO BUTTON */
+
 .hide {
   display: none;
 }
-
 
 .show {
   height: 5em;
@@ -309,4 +310,73 @@ li:hover {
   background: #6B7A8F;
   cursor: pointer;
   color: white;
+}
+
+/* WINNER MODAL */
+
+.winner {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 18em;
+  text-align: center;
+  width: 50em;
+  height: 40em;
+  padding: 1em;
+  border: 5px solid #F7882F;
+  background: white;
+  padding: 1em;
+  margin: 1em auto;
+  box-shadow: -1px 2px 4px black;
+}
+
+.winner h1  {
+  font-size: 4em;
+  display: run-in;
+  animation-name: text;
+  animation-duration: 5s;
+}
+
+.winner h2 {
+  font-size: 3em;
+  animation-name: text;
+  animation-duration: 5s;
+}
+
+@keyframes text {
+  0% {color: white}
+  100% {color: black}
+}
+
+.buttons  {
+  display: flex;
+  justify-content: space-around;
+  height: 2.3em;
+  margin: 0;
+}
+
+.none {
+  display: none;
+}
+
+.new {
+  height: 2em;
+  width: 15em;
+  background: #6B7A8F;
+  border: 3px solid #F7882F;
+  border-radius: 5px;
+  font-size: 1em;
+  color: white;
+  transition: .3s ease-in-out;
+  box-shadow: -1px 1px 4px black;
+}
+
+.new:hover {
+  background: #F7882F;
+  border: 3px solid #6B7A8F;
+  cursor: pointer;
+}
+
+.showNone {
+  display: none;
 }
