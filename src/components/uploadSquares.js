@@ -57,7 +57,7 @@ class Uploads extends Component {
         <div className="fileHold">
           <div className="uploadMe" onClick={this.props.modalChange}>
             <h2>Found a dog?<br/> Click Me!</h2>
-            <h5>Double cick a dog to remove them!</h5>
+            <h5>Double click a dog to remove them!</h5>
           </div>
           {this.state.files.map((fileData) => (
             <Files
