@@ -74,12 +74,13 @@ render()  {
             </div>
         </div>
         <Uploads
+          win={this.state.wonGame}
           modalState={this.state.showmodal}
           modalChange={this.modalShow}
           formInputs={this.props.formInputs}
         />
         <div className={this.state.bingo ? "show" : "hide"}><button onClick={this.winGame}>BINGO?</button></div>
-        <div className={this.state.showmodal ? "blurBoard" : "boardContain"}>
+        <div id={this.state.wonGame ? "showNone" : null} className={this.state.showmodal ? "blurBoard" : "boardContain"}>
           {this.state.breedData.map((dogData) => (
             <Square
             data={dogData}
@@ -88,7 +89,8 @@ render()  {
           ))}
         </div>
         <Footer
-        modalState={this.state.showmodal} />
+          win={this.state.wonGame}
+          modalState={this.state.showmodal} />
       </React.Fragment>
     )
   }

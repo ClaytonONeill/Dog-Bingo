@@ -53,7 +53,7 @@ class Uploads extends Component {
   render()  {
     return (
       <React.Fragment>
-      <div className={this.props.modalState ? "blurUploads" : "uploads"}>
+      <div id={this.props.win ? "showNone" : null} className={this.props.modalState ? "blurUploads" : "uploads"}>
         <div className="fileHold">
           <div className="uploadMe" onClick={this.props.modalChange}>
             <h2>Found a dog?<br/> Click Me!</h2>

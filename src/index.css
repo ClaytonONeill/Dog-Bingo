@@ -377,6 +377,6 @@ li:hover {
   cursor: pointer;
 }
 
-.showNone {
+#showNone {
   display: none;
 }

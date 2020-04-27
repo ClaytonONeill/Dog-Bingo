@@ -4,7 +4,7 @@ class Footer extends Component {
   render()  {
     return  (
       <React.Fragment>
-      <div className={this.props.modalState ? "noFooter" : "footer"}>
+      <div id={this.props.win ? "showNone" : null} className={this.props.modalState ? "noFooter" : "footer"}>
         <div className="listContain">
           <div className="listOne">
             <ul>
