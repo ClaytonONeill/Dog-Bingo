@@ -13,7 +13,9 @@ class Main extends Component  {
     super(props);
     this.state = {
       breedData: [],
-      showmodal: false
+      showmodal: false,
+      checked: [],
+      bingo: false
     }
   }
 
@@ -32,6 +34,12 @@ class Main extends Component  {
         }).catch(err=>console.log(err))
   }
 
+  setTrue = () => {
+    this.setState({
+      bingo: true
+    })
+  }
+
 
 componentDidMount() {
       this.getDogs();
@@ -47,10 +55,13 @@ render()  {
           modalChange={this.modalShow}
           formInputs={this.props.formInputs}
         />
+        <div className={this.state.bingo ? "show" : "hide"}><button>BINGO?</button></div>
         <div className={this.state.showmodal ? "blurBoard" : "boardContain"}>
           {this.state.breedData.map((dogData) => (
             <Square
-            data={dogData} />
+            data={dogData}
+            change={this.setTrue}
+            dogArray={this.state.checked} />
           ))}
         </div>
         <Footer

@@ -7,7 +7,11 @@ class Square extends Component {
   }
 
   activate = (event) => {
+    this.props.dogArray.push(event.target.id);
     event.currentTarget.style.background="#F7C331";
+    if (this.props.dogArray.length >= 5)  {
+      this.props.change();
+    }
   }
 
   render()  {
